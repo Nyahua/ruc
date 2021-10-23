@@ -53,16 +53,16 @@ int haveBadPixel()
 
 void pixelWeight(int row, int col)
 {
+    int weightSum;
+    weightSum = (
+            ((row > 0) ? pixelArr[3][row - 1][col] : 0) 
+            + ((col > 0) ? pixelArr[3][row][col - 1] : 0) 
+            + ((row < n-1) ? pixelArr[3][row + 1][col] : 0) 
+            + ((col < m-1) ? pixelArr[3][row][col + 1] : 0)
+        );
     int color;
     for (color = 0; color < 3; color++)
     {
-        int weightSum;
-        weightSum = (
-                ((row > 0) ? pixelArr[3][row - 1][col] : 0) 
-                + ((col > 0) ? pixelArr[3][row][col - 1] : 0) 
-                + ((row < n) ? pixelArr[3][row + 1][col] : 0) 
-                + ((col < m) ? pixelArr[3][row][col + 1] : 0)
-            );
         // how to round up: int a = (59 + (4 - 1)) / 4;
         // https://stackoverflow.com/questions/2422712/rounding-integer-division-instead-of-truncating
         if (weightSum != 0)
@@ -71,8 +71,8 @@ void pixelWeight(int row, int col)
                 (int)(
                     ((row > 0) ? pixelArr[color][row - 1][col] : 0) * pixelArr[3][row - 1][col] 
                     + ((col > 0) ? pixelArr[color][row][col - 1] : 0) * pixelArr[3][row][col - 1] 
-                    + ((row < n) ? pixelArr[color][row + 1][col] : 0) * pixelArr[3][row + 1][col] 
-                    + ((col < m) ? pixelArr[color][row][col + 1] : 0) * pixelArr[3][row][col + 1] 
+                    + ((row < n-1) ? pixelArr[color][row + 1][col] : 0) * pixelArr[3][row + 1][col] 
+                    + ((col < m-1) ? pixelArr[color][row][col + 1] : 0) * pixelArr[3][row][col + 1] 
                     + (weightSum - 1)
                     ) / weightSum;
         }
@@ -110,18 +110,38 @@ void printArr()
     }
 }
 
+void printArrTest()
+{
+    int row, col;
+    for (row = 0; row < n; row++)
+    {
+        for (col = 0; col < m; col++)
+        {
+            printf("R %d G %d B %d",
+                   pixelArr[0][row][col], pixelArr[1][row][col],
+                   pixelArr[2][row][col]);
+            if (col != (m-1)) {
+                printf(" ");
+            }
+            else {
+                printf("\n");
+            }
+        }
+    }
+}
+
 int main()
 {
     scanf("%d %d", &n, &m);
     getchar();
     scan2array();
     assignWeight();
-    while (haveBadPixel() == 1)
+    while (haveBadPixel())
     {
         fixPixels();
         assignWeight();
     }
-    printArr();
+    printArrTest();
 
     return 0;
 }
