@@ -15,7 +15,7 @@ int main()
     {
         printf("Enter a character\n");
         scanf("%c", &c);
-        getchar();
+        getchar(); // clear the \n buffer from scanf
         printf("%c\n", c);
     }
     while (c != 'q');
