@@ -4,3 +4,6 @@
 - [Problem with scanf() when there is fgets()/gets()/scanf() after it](tips/scanf_buffer.c)
 ## data type
 - [`_Bool` data type](tips/bool.c)
+
+## pointer and array
+- [sizeof array and pointer](tips/sizeof_array_pionter.c)
