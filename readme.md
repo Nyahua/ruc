@@ -7,4 +7,4 @@
 
 ## pointer and array
 - [sizeof array and pointer](tips/sizeof_array_pionter.c)
-- [pointer value assignment Segmentation fault](tips/pointer_value_assingment.c)
+- [pointer value assignment `Segmentation fault`](tips/pointer_value_assingment.c)
