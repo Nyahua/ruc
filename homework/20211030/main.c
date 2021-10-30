@@ -38,7 +38,6 @@ int main()
             }
         }
         arrScore[i][1] = score;
-        arrScore[i][2] = 1;
         // bubble this student
         int rowNum = i;
         int tempStuNum, tempScore;
@@ -52,7 +51,6 @@ int main()
                 arrScore[rowNum - 1][1] = arrScore[rowNum][1];
                 arrScore[rowNum][0] = tempStuNum;
                 arrScore[rowNum][1] = tempScore;
-                arrScore[rowNum][2] = arrScore[rowNum - 1][2] + 1;
             }
             if (arrScore[rowNum][1] == arrScore[rowNum - 1][1] & arrScore[rowNum][0] < arrScore[rowNum - 1][0])
             {
@@ -66,13 +64,24 @@ int main()
             rowNum--;
         }
     }
-
-    // printf("%d students, %d ranks", m, k);
+    // ranking
+    arrScore[0][2] = 1;
+    for (i = 1; i < m; i++)
+    {
+        if (arrScore[i][1] == arrScore[i-1][1]) {
+            arrScore[i][2] = arrScore[i-1][2];
+        }
+        else {
+            arrScore[i][2] = arrScore[i-1][2] + 1;
+        } 
+    }
+    // print array
     printf("-----------------------\n");
     for (i = 0; i < m; i++)
     {
-        printf("%d: %d\n", arrScore[i][0], arrScore[i][1]);
+         printf("%d: %d, %d\n", arrScore[i][0], arrScore[i][1], arrScore[i][2]);
     }
+    
     printf("\n");
 
     return 0;
