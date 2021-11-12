@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <math.h>
 
-long jc(int n)
+unsigned long long int jc(int n)
 {
     int i;
-    long k = 1;
+    unsigned long long int k = 1;
     for (i = 1; i <= n; i++)
     {
         k = k * i;
@@ -17,6 +17,8 @@ int main()
     double x, t, sinx, cosx;
     sinx = 0;
     scanf("%lf %lf", &x, &t);
+    double pi2 = 3.1415926 * 2;
+    x = fmod(x, pi2);
     int sign = 1;
     int i = 0;
     while (fabs(pow(x, i) / jc(i)) > t)
