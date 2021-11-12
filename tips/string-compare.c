@@ -6,7 +6,7 @@ int strIndex(char ch, char str[])
     int idx = 0;
     while (str[idx]) // while not eof string '\0'==0==false
     {
-        if (ch == str[idx])
+        if (ch == str[idx]) // search the ch in string
         {
             return idx;
         }

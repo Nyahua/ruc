@@ -5,6 +5,9 @@
 ## data type
 - [`_Bool` data type](tips/bool.c)
 
+## string
+- [string compare with custom order](tips/string-compare.c)
+
 ## pointer and array
 - [sizeof array and pointer](tips/sizeof_array_pionter.c)
 - [pointer value assignment `Segmentation fault`](tips/pointer_value_assingment.c)
