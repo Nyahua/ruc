@@ -48,7 +48,7 @@ int main()
     printf("\n********Begin of Debug************\n\n");
     for (i = 0; i < flag; i++)
     {
-        printf("%d ", fa[flag - 1][0]);
+        printf("%d ", fa[i - 1][0]);
     }
     printf("\n********End of Debug************\n\n");
     /* end of debug, delete previous lines */
