@@ -2,6 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 
+int *randArray(size_t nums, int maxValue)
+{
+    srand(time(NULL));
+    int *arr = (int *)malloc(nums * sizeof(int));
+    for (int i = 0; i < nums; i++)
+    {
+        arr[i] = rand() % maxValue;
+    }
+    return arr;
+}
+
 void printArray(int arr[], int nums)
 {
     printf("{");
@@ -10,17 +21,21 @@ void printArray(int arr[], int nums)
     printf("%d}\n", arr[nums - 1]);
 }
 
+void swap(int arr[], int x, int y)
+{
+    int temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+}
+
 int main()
 {
+    const int maxValue = 100;
     int n; // nums of array
-    puts("Enter how many values to sort:");
+    scanf("Enter how many values to sort:");
     scanf("%d", &n);
     srand(time(NULL));
-    int arr[n];
-    for (int i = 0; i < 5; i++)
-    {
-        arr[i] = rand() % 20;
-    }
+    int *arr = randArray(n, maxValue);
     printArray(arr, n);
 
     for (int i = 0; i < n - 1; i++)
@@ -29,13 +44,13 @@ int main()
         {
             if (arr[i] > arr[j])
             {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                swap(arr, i, j);
             }
         }
-        printArray(arr, n);
     }
 
+    printArray(arr, n);
+    free(arr);
+    
     return 0;
 }
