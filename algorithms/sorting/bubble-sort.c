@@ -35,21 +35,16 @@ int main()
     printf("Enter how many values to sort:");
     scanf("%d", &n);
     int *arr = randArray(n, maxValue);
-    printArray(arr, n);
-
+    printArray(arr, n)
+    ;
+    //bubule sorting:
     for (int i = 0; i < n - 1; i++)
-    {
         for (int j = i + 1; j < n; j++)
-        {
             if (arr[i] > arr[j])
-            {
                 swap(arr, i, j);
-            }
-        }
-    }
 
     printArray(arr, n);
     free(arr);
-    
+
     return 0;
 }
