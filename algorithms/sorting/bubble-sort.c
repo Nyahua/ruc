@@ -32,9 +32,8 @@ int main()
 {
     const int maxValue = 100;
     int n; // nums of array
-    scanf("Enter how many values to sort:");
+    printf("Enter how many values to sort:");
     scanf("%d", &n);
-    srand(time(NULL));
     int *arr = randArray(n, maxValue);
     printArray(arr, n);
 
