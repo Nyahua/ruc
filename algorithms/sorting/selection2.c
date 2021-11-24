@@ -28,6 +28,14 @@ void swap(int arr[], int x, int y)
     arr[y] = temp;
 }
 
+void selectionSort(int a[], int nums)
+{
+    for (int i = 0; i < nums - 1; i++)
+        for (int j = i + 1; j < nums; j++)
+            if (a[i] > a[j])
+                swap(a, i, j);
+}
+
 int main()
 {
     const int maxValue = 100;
@@ -37,11 +45,7 @@ int main()
     int *arr = randArray(n, maxValue);
     printArray(arr, n);
 
-    // bubule sorting:
-    for (int i = 0; i < n - 1; i++)
-        for (int j = i + 1; j < n; j++)
-            if (arr[i] > arr[j])
-                swap(arr, i, j);
+    selectionSort(arr, n);
 
     printArray(arr, n);
     free(arr);
