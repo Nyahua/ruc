@@ -3,23 +3,21 @@
 
 void f(char s[], int i, int j)
 {
-    if (strlen(s) == 1)
-        s[0] = s[0];
-    else
+    if (j > i)
     {
         char t = s[i];
         s[i] = s[j];
         s[j] = t;
         f(s, i + 1, j - 1);
     }
+    else
+        return;
 }
 
 int main()
 {
     char a[] = "abcdefg";
     f(a, 0, 4);
-    for (int i = 0; i < strlen(a); i++)
-        printf("%d, ", a[i]);
-    printf("\n");
+    printf("%s\n", a);
     return 0;
 }
