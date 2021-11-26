@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void reverse(int a[100], int i, int j)
+void reverse(int a[], int i, int j)
 {
     int t;
     while (i < j)
@@ -16,7 +16,7 @@ void reverse(int a[100], int i, int j)
 int main()
 {
     int a[5] = {1, 2, 3, 4, 5};
-    reverse(a[5], 0, 4);
+    reverse(a, 0, 4);
     for (int i = 0; i < 5; i++)
         printf("%d, ", a[i]);
     printf("\n");
