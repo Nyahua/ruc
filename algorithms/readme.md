@@ -1,7 +1,8 @@
 ## Sorting
 - selection sort
--- [selection sort by functions](algorithms\sorting\selection1.c)
--- [selection sort double loop](algorithms\sorting\selection2.c)
+  - [selection sort by functions](sorting/selection1.c)
+  - [selection sort double loop](sorting/selection2.c)
+  - [quick sort](sorting/quicksort.c)
 
 ## Reference
 - [Understanding Sorting Algorithms *freeCoedCamp@youtube*](https://www.youtube.com/watch?v=l7-f9gS8VOs)
