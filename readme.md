@@ -1,4 +1,5 @@
 # index of tips
+
 ## basic syntax
 - [switch chars](tips/switch-char.c)
 ## inputs and outputs
