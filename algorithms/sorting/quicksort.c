@@ -1,6 +1,7 @@
 /*
 includes all functions to generate random ints
 and print them out
+shorturl.at/ctwyJ
 */
 
 #include <stdio.h>
