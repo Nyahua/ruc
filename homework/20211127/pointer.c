@@ -1,3 +1,5 @@
+/* 指针的基本概念 */
+
 #include <stdio.h>
 
 int main()
@@ -14,8 +16,6 @@ int main()
     printf("addr of p: %p\n", &p);
     printf("value of p: %p\n", p);
     printf("value of p point to: %d\n", *p);
-
-
 
     return 0;
 }

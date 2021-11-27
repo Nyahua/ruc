@@ -1,3 +1,4 @@
+// strstr, strcpy, strcat
 #include <stdio.h>
 #include <string.h>
 
@@ -12,7 +13,7 @@ int main()
     char *pch = strstr(str1, str2);
     printf("searched: %s\n", pch);
     printf("pch adress: %p\n", pch);
-    printf("pch to str: %li\n", pch-str1);
+    printf("pch to str: %li\n", pch - str1);
 
     char tail[200];
     strcpy(tail, pch + strlen(str2));
