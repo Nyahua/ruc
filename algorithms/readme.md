@@ -1,3 +1,9 @@
+## Sorting
+- selection sort
+-- [selection sort by functions](algorithms\sorting\selection1.c)
+-- [selection sort double loop](algorithms\sorting\selection2.c)
+
+## Reference
 - [Understanding Sorting Algorithms *freeCoedCamp@youtube*](https://www.youtube.com/watch?v=l7-f9gS8VOs)
 - [Mastering Algorithms with C - Kyle Loudon](https://github.com/Exoskill/C-headfirst/blob/master/Mastering%20Algorithms%20with%20C%20-%20Kyle%20Loudon.pdf)
 - [grokking algorithms](https://github.com/cjbt/Free-Algorithm-Books/blob/master/book/Grokking%20Algorithms%20-%20An%20illustrated%20guide%20for%20programmers%20and%20other%20curious%20people.pdf)
