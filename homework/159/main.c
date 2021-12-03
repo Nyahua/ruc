@@ -50,12 +50,10 @@ str2为替换的子串，若在原串中有多个str1则应全部替换。
     p = strstr(a, str1); // find fisrt str2
     while (p)            // 当p找到内容时循环，否则返回NULL
     {
-        // begin replace
         char *temp;
-        strcpy(temp, p + strlen(str1)); // save the tail
-        strcpy(p, str2);                // replace all string from p with str2
-        strcat(a, temp);                // concat new a with tail
-        // printf("tail: %s\n", a);
+        strcpy(temp, p + strlen(str1));     // save the tail
+        strcpy(p, str2);                    // replace all string from p with str2
+        strcat(a, temp);                    // concat new a with tail
         p = strstr(p + strlen(str2), str1); // contunue search from tail
     }
 }
