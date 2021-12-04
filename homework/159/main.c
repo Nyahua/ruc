@@ -57,6 +57,7 @@ str2为替换的子串，若在原串中有多个str1则应全部替换。
         p = strstr(p + strlen(str2), str1); // contunue search from tail
     }
 }
+
 int main()
 {
     strcpy(a, "home, sweet home, my sweet home!");
