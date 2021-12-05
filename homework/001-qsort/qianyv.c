@@ -43,15 +43,13 @@ void mySort(int *ary, int left, int right)
 	{
 		while (low < high && ary[high] > guard)
 			high--;
-		ary[low] = ary[high];
-		// if (low < high)
-		// {
-		// 	ary[low] = ary[high];
-		// 	low++;
-		// }
+		if (low < high)
+		{
+			ary[low] = ary[high];
+			low++;
+		}
 		while (low < high && ary[low] < guard)
 			low++;
-		ary[high] = ary[low];
 		if (low < high)
 		{
 			ary[high] = ary[low];
