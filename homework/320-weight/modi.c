@@ -52,7 +52,11 @@ int main()
 	int alr = 0; //已经有的重量
 	weigh(0);
 	for (int i = 0; i < m; i++)
+	{
 		zuhe[i][1] = weight2[zuhe[i][0]];
+		printf("%lli:%lli\n", zuhe[i][0], zuhe[i][1]);
+	}
+		puts("+++++++++++DEBUG END+++++++++++++++++");
 
 	qsort(zuhe, m, sizeof(zuhe[0]), cmparray);
 	for (int i = 0; i < m; i++)
