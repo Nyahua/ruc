@@ -1,6 +1,7 @@
 // C program to print all permutations with duplicates allowed
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 int n;
 char a[510], res[510] = {0}; // 原始待排列字符串与结果字符串
 int flag[510] = {0}; // 标记本轮递归是否被使用
@@ -13,6 +14,7 @@ void permute(int l) // 从l开始排列字符串
     {
         count += 1;
         printf("%s\n", res);
+        exit(0);
     }
     else
     {
