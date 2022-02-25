@@ -1,0 +1,9 @@
+1,Davolio,Nancy,05/01/2020,4000
+2,Fuller,Andrew,08/14/2020,6520
+3,Leverling,Janet,04/01/2020,1056
+4,Peacock,Margaret,05/03/2021,4000
+5,Buchanan,Steven,10/17/2021,5000
+6,Suyama,Michael,10/17/2021,1000
+7,King,Robert,01/02/2020,1056
+8,Callahan,Laura,03/05/2020,1056
+9,Dodsworth,Joeseph,11/15/2020,1056
