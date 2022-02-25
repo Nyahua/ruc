@@ -2,4 +2,4 @@
 
 - ## tips
 
-- - [### matplotlib lifcycle](https://matplotlib.org/stable/tutorials/introductory/lifecycle.html)
+  - ### [matplotlib lifcycle](https://matplotlib.org/stable/tutorials/introductory/lifecycle.html)
