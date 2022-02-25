@@ -1,4 +1,5 @@
 # Codes on RUC Couses
 
-- ## tis
+- ## tips
+
 - - [### matplotlib lifcycle](https://matplotlib.org/stable/tutorials/introductory/lifecycle.html)
