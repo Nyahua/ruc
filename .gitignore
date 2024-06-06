@@ -2,6 +2,7 @@
 *Zone.Identifier*
 git-pull/
 restricted/
+.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
